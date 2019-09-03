@@ -128,11 +128,21 @@ az keyvault secret set -o table --vault-name $mikv_Name --name "MySecret" --valu
 
 ```
 
+Run the unit tests
+
+```bash
+
+cd src/unit-tests
+
+dotnet test --logger:trx
+
+```
+
 Run the application locally
 
 ```bash
 
-cd src
+cd ../app
 
 # run in the background
 dotnet run $mikv_Name &

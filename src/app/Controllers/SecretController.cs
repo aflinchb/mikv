@@ -37,7 +37,7 @@ namespace Mikv.Controllers
 
             try
             {
-                string secret = config.GetValue<string>(Constants.KeyVaultSecretName);
+                string secret = config[Constants.KeyVaultSecretName];
 
                 return Ok(secret);
             }
